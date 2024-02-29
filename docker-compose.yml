@@ -1,0 +1,8 @@
+version: '3'
+services:
+  my_service:
+    image: ubuntu:20.04
+    command: bash -c "apt-get update"
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
