@@ -3,7 +3,7 @@ services:
   my_service:
     image: ubuntu:20.04
     command: bash -c "apt-get update && apt-get install -y openssh-server && sed -i 's/#Port 22/Port 25555/' /etc/ssh/sshd_config && service ssh restart"
-      privileged: true
+    privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
